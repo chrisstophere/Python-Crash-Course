@@ -27,6 +27,7 @@ person3 = {
           }
 # Add dictionary 3 to the people list
 people.append(person3)
+
 # Loop thru the people list
 for person in people:
 # Assign a variable to each value in the people list.
@@ -35,3 +36,5 @@ for person in people:
     city = person['city'].title()
 # Print a sentence using the variables created above.
     print(f"{name}, of {city}, is {age} years old.")
+
+
