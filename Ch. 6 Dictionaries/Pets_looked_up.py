@@ -33,4 +33,7 @@ pets.append(pet)
 # print each item in the list in the form of a sentence
 for pet in pets:
     print(f"Here's what I know about {pet['owner'].title()}'s pet {pet['animal type']}:")
+    print(f"\tTheir name is: {pet['name'].title()}.")
+    print(f"\tThey weigh: {pet['weight']}.")
+    print(f"\tThey like to eat: {pet['eats']}.")
 # print(pets)
