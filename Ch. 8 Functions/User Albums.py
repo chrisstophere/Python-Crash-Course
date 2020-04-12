@@ -17,8 +17,8 @@ while True:
     if title == 'q':
         break
 
-album = make_album(artist, title)
-print(album)
+    album = make_album(artist, title)
+    print(album)
 
 # album = make_album('beethoven', 'ninth symphony')
 # print(album)
