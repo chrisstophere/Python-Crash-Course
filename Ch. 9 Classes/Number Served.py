@@ -24,13 +24,25 @@ class Restaurant:
     def set_number_served(self, number_served):
         """Set the number of customers to the given value"""
         self.number_served = number_served
+        
+    def increment_number_served(self, customers):
+        """Add the given number of customers to 'number_served'"""
+        self.number_served += customers
+        
 
 restaurant = Restaurant("luigi", 'italian')
-print(restaurant.name)
-print(restaurant.type)
-restaurant.describe_restaurant()
-restaurant.open_restaurant()
+
 print(restaurant.number_served)
 restaurant.served_customers()
-restaurant.set_number_served(10)
-print(restaurant.served_customers)
+
+restaurant.number_served = 10
+print(restaurant.number_served)
+restaurant.served_customers()
+
+restaurant.set_number_served(15)
+print(restaurant.number_served)
+restaurant.served_customers()
+
+restaurant.increment_number_served(55)
+print(restaurant.number_served)
+restaurant.served_customers()
