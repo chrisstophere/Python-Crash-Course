@@ -1,5 +1,5 @@
 class Restaurant:
-    """A simple attemp to model a restaurant"""
+    """A simple attempt to model a restaurant"""
 
     def __init__(self, restaurant_name, cuisine_type):
         """Initialize the restaurant name and type of cuisine it has"""
@@ -20,29 +20,24 @@ class Restaurant:
     def served_customers(self):
         """Prints how many customers have been served"""
         print(f"{self.name.title()} has served {self.number_served} customers.")
-        
+
     def set_number_served(self, number_served):
         """Set the number of customers to the given value"""
         self.number_served = number_served
         
-    def increment_number_served(self, customers):
-        """Add the given number of customers to 'number_served'"""
-        self.number_served += customers
         
+class IceCreamStand(Restaurant):
+    """Describes an Ice Cream Stand's stuff"""
+    
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['vanilla', 'chocolate', 'strawberry']
+        
+    def list_flavors(self):
+        """Print a statement that lists the Ice Cream flavors"""
+        for flavor in self.flavors:
+            print(f"We have {flavor.title()} ice cream.")    
 
-restaurant = Restaurant("luigi", 'italian')
-
-print(restaurant.number_served)
-restaurant.served_customers()
-
-restaurant.number_served = 10
-print(restaurant.number_served)
-restaurant.served_customers()
-
-restaurant.set_number_served(15)
-print(restaurant.number_served)
-restaurant.served_customers()
-
-restaurant.increment_number_served(55)
-print(restaurant.number_served)
-restaurant.served_customers()
+# Call the method IceCreamStand
+restaurant = IceCreamStand("Frosty's", "deserts")
+restaurant.list_flavors()

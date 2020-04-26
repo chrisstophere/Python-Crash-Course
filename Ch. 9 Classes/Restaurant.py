@@ -1,5 +1,5 @@
 class Restaurant:
-    """A simple attemp to model a restaurant"""
+    """A simple attempt to model a restaurant"""
 
     def __init__(self, restaurant_name, cuisine_type):
         """Initialize the restaurant name and type of cuisine it has"""
@@ -18,9 +18,9 @@ class Restaurant:
         print(f"{self.name.title()} is open.")
         
     def served_customers(self):
-         """Prints how many customers have been served"""
-         print(f"{self.name.title()} has served {self.number_served} customers.")
-         
+        """Prints how many customers have been served"""
+        print(f"{self.name.title()} has served {self.number_served} customers.")
+        
     def set_number_served(self, number_served):
         """Set the number of customers to the given value"""
         self.number_served = number_served
